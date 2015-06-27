@@ -9,7 +9,7 @@ Slides
 - 04/19: [Web Audio APIの初歩](http://www.slideshare.net/kubosho/web-audio-api-33705589)
 - 05/08: [Web Audio APIを使って可聴域を調べるアプリをつくってみた](http://www.slideshare.net/kubosho/web-audio-api-34440311)
 - 05/29: [Web Audio APIとGitHubのContributionsをマッシュアップしてみた](http://www.slideshare.net/kubosho/web-audio-apigithubcontributions)
-  08/03: [Steins;Gitについて](http://www.slideshare.net/kubosho/steinsgit)
+- 08/03: [Steins;Gitについて](http://www.slideshare.net/kubosho/steinsgit)
 
 2015
 ------------
