@@ -16,4 +16,3 @@ Slides
 
 - 05/08: [ブラウザ上で弾ける「あの楽器」を作ってみた](https://speakerdeck.com/kubosho/burauzashang-dedan-keru-afalsele-qi-wozuo-tutemita)
 - 06/25: [高品質な CSS を書きたい](https://speakerdeck.com/kubosho/gao-pin-zhi-na-css-woshu-kitai)
-
