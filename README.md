@@ -3,6 +3,12 @@ Slides
 
 今まで登壇した際に使った資料一覧です。
 
+2013
+------------
+
+- 08/24: [TypeScriptを使う場面、使わない場面](http://kubosho.github.io/slides/tsbeginner/index.html)
+  - at TypeScript初心者向け勉強会 (主催者)
+
 2014
 ------------
 
