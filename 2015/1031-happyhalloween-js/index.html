@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Kotori という CSS をフォーマットしたり解析してくれるツールを作った</title>
+
+		<meta name="description" content="CSS をフォーマットしたり解析してくれる Kotori というツールをなぜ作ったかや、使っているライブラリなどを紹介します。">
+		<meta name="author" content="kubosho_">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>CSS の自動整形・解析をするツールの紹介</h1>
+					<p>
+						<small>Shota Kubota / <a href="//twitter.com/kubosho_">@kubosho_</a></small>
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>自己紹介</h2>
+						<p>kubosho_</p>
+						<p>(自称) CSS オジサン</p>
+						<p>ブログ: <a href="http://blog.kubosho.com">I'm kubosho_</a></p>
+						<p>Twitter: <a href="//twitter.com/kubosho_">kubosho_</a></p>
+						<p>GitHub: <a href="//github.com/kubosho">kubosho</a></p>
+						<p>イカID: kubosh0</p>
+					</section>
+					<section>
+						<h2>作ったもの</h2>
+						<p><a href="//o2project.github.io/steins-git/">Steins;Git</a><br>Steins;Gate の世界観で Git を説明する同人誌</p>
+						<p><a href="//kubosho.github.io/Nico/">Nico</a><br>Honoka を元にした日本語も美しく表示できる Bootstrap テーマ</p>
+						<p><a href="//github.com/kubosho/nozomi">Nozomi</a><br>高品質な CSS を書くための助けになるかもしれない gulp ワークフロー</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>CSS の自動整形・解析をするツールを作りました</h2>
+				</section>
+
+				<section>
+					<h2>Kotori</h2>
+					<p>
+						<a href="//github.com/kubosho/kotori">github.com/kubosho/kotori</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Kotori って何？</h2>
+					<p>
+						CSS を自動的に整形・解析するツール
+					</p>
+					<p>
+						stylelint, Autoprefixer, CSSfmt, clean-css, StyleStats を内包している
+					</p>
+				</section>
+
+				<section>
+					<h2>Kotori って何？</h2>
+					<p>
+						概念としては「CSS 版 imageOptim」
+					</p>
+				</section>
+
+				<section>
+					<h2>なぜ Kotori を作ったのか？</h2>
+					<p>
+						自分が仕事で関わっている案件の CSS がカオスだったので、どうにかしたかったから
+					</p>
+					<p>
+						ECMAScript 2015 やそれ以降に触れておかないという危機感があったから
+					</p>
+					<p>
+						CLI 上で動作するツールを、一度は作りたかったから
+					</p>
+				</section>
+
+				<section>
+					<h2>なぜ Kotori を作ったのか？</h2>
+					<p>
+						gulp や PostCSS を組み合わせれば同じようなことはできるが、ひとまとめにしたツールがあるほうが楽だから
+					</p>
+					<p>
+						gulpfile.js を直接触るより設定ファイルを触るほうが楽だから
+					</p>
+				</section>
+
+				<section>
+					<h2>なぜ Kotori を作ったのか？</h2>
+					<p>
+						μ's のメンバーの名前を冠したライブラリやツールを増やしたかったから
+					</p>
+				</section>
+
+				<section>
+					<h2>開発で使っている npm packages</h2>
+					<ul>
+						<li>Babel</li>
+						<li>chokidar (依存している fsevents のインストールが遅くて辛いので取り除く予定)</li>
+						<li>ESDoc</li>
+						<li>moment</li>
+						<li>optionator</li>
+						<li>through2 (Node.js 本体の stream に置換する予定)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>開発で使っている npm packages (テスト編)</h2>
+					<ul>
+						<li>istanbul + Coveralls</li>
+						<li>ESLint</li>
+						<li>mocha</li>
+						<li>espower-babel</li>
+						<li>power-assert</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>開発で使っているサービス</h2>
+					<ul>
+						<li>Travis CI + AppVeyor</li>
+						<li>Code Climate</li>
+						<li>Coveralls</li>
+						<li>GitHub</li>
+						<li>Slack</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>デモ</h2>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>終わり</h1>
+					<p>
+						- Kotori: <a href="//github.com/kubosho/kotori">kubosho/kotori</a><br>
+						- ブログ: <a href="http://blog.kubosho.com">I'm kubosho_</a><br>
+						- Twitter: <a href="//twitter.com/kubosho_">kubosho_</a><br>
+						- GitHub: <a href="//github.com/kubosho">kubosho</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
