@@ -32,3 +32,5 @@ Slides
   - at 同人誌の勉強会
 - 08/30: [background-(image|size) の深みへようこそ](http://www.slideshare.net/kubosho/backgroundimagesize)
   - at CSSイベント「Back to Basics」
+- 10/31: [CSS の自動整形・解析をするツールの紹介](https://kubosho.github.io/slides/2015/1031-happyhalloween-js/#/)
+  - at 「ECMAScript6勉強会」HappyHalloween JS 祭
