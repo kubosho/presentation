@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>パフォーマンスという概念が存在しない初心者の世界</title>
+
+		<meta name="description" content="自分が JS 初心者の頃に書いてしまっていたパフォーマンスが悪くなる書き方を、ベンチマークとともに紹介します">
+		<meta name="author" content="kubosho_">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>パフォーマンスという概念が存在しない初心者の世界</h1>
+					<p>
+						<small>Shota Kubota / <a href="//twitter.com/kubosho_">@kubosho_</a></small>
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<h2>自己紹介</h2>
+					<p>kubosho_</p>
+					<p><a href="http://togetter.com/li/839870?page=5">CSS オジサン</a></p>
+					<p>今度の冬コミで新刊・既刊それぞれ一種類ずつ頒布</p>
+					<p>別のサークルに記事を一つ寄稿する予定</p>
+				</section>
+
+				<section>
+					<h2>私と JavaScript</h2>
+					<p>JavaScript を書き始めたのは 2012 年 7 月から</p>
+					<p>案件で使わざるを得ない状況になった</p>
+					<p>それまで触ろうと思っていたが触ってなかった</p>
+				</section>
+
+				<section>
+					<h2>その時にやってしまったしくじりを話します</h2>
+				</section>
+
+				<section>
+					<h2>しくじりその一</h2>
+					<p>for (var i = 0; i < items.length; i++) { ... }</p>
+				</section>
+
+				<section>
+					<h2>よく言われているのは以下のようにすると早い</h2>
+					<p>for (var i = 0, l = items.length; i < l; i++) { ... }</p>
+				</section>
+
+				<section>
+					<h2>推測せずに jsPerf で測ってみる</h2>
+					<p><a href="https://jsperf.com/array-length-vs-cached">[rev 1] array.length vs. cached · jsPerf</a></p>
+					<p><a href="https://jsperf.com/array-length-vs-cached/28">[rev 28] array.length vs. cached · jsPerf</a></p>
+				</section>
+
+				<section>
+					<h2>コードの書き方によっては約 2 割遅くなる</h2>
+				</section>
+
+				<section>
+					<h2>しくじりその二</h2>
+					<p>DOM ツリーにその都度要素を追加する</p>
+				</section>
+
+				<section>
+					<h2>要素を逐次 DOM ツリーへ追加する例</h2>
+					<p>
+						<pre><code data-trim>
+for (var i = 0, l = hiragana.length; i < l; i++) {
+  var div = document.createElement("div");
+  div.textContent = hiragana[i];
+
+  outputE.appendChild(div);
+}
+						</code></pre>
+					</p>
+				</section>
+
+				<section>
+					<h2>一旦 documentFragment に追加してから DOM ツリーへ追加する例</h2>
+					<p>
+						<pre><code data-trim>
+var fragment = document.createDocumentFragment();
+
+for (var i = 0, l = hiragana.length; i < l; i++) {
+  var div = document.createElement("div");
+  div.textContent = hiragana[i];
+
+  fragment.appendChild(div);
+}
+
+outputE.appendChild(fragment);
+						</code></pre>
+					</p>
+				</section>
+
+				<section>
+					<h2>後者のほうが DOM ツリーへの要素追加が一回で済む分早くなりそう</h2>
+				</section>
+
+				<section>
+					<h2>やはり推測せずに実際に測ってみよう</h2>
+					<p>
+						<a href="http://jsperf.com/append-only-vs-append-with-documentfragment">append only vs append with documentFragment · jsPerf</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Firefox だと逐次 appendChild() する方法は遅い</h2>
+				</section>
+
+				<section>
+					<h2>データ量が増えた時の挙動</h2>
+					<p>
+						<a href="http://jsperf.com/append-only-vs-append-with-documentfragment/2">[rev 2] append only vs append with documentFragment · jsPerf</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>逐次 DOM ツリーへ追加した時 Firefox はデータ量が増えれば増えるほど比例して遅くなる</h2>
+				</section>
+
+				<section>
+					<h2>まとめ</h2>
+					<p>var i = 0, l = items.length; は書き方によっては遅くなる</p>
+					<p>DOM ツリーへその都度追加する方法は特に Firefox で遅くなるのでまとめて追加する</p>
+				</section>
+
+				<section>
+					<h2>パフォーマンスチューニングは推測ではなく計測しよう</h2>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>終わり</h1>
+					<p>
+						- ブログ: <a href="http://blog.kubosho.com">I'm kubosho_</a><br>
+						- Twitter: <a href="//twitter.com/kubosho_">kubosho_</a><br>
+						- GitHub: <a href="//github.com/kubosho">kubosho</a><br>
+						- イカID: kubosh0
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
