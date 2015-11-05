@@ -175,7 +175,7 @@ outputE.appendChild(fragment);
 
 				<section>
 					<p>var i = 0, l = items.length; は書き方によっては遅くなる</p>
-					<p>DOM ツリーへその都度追加する方法は特に Firefox で遅くなるのでまとめて追加する</p>
+					<p>逐次 DOM ツリーへ追加するのではなく、documentFragment を使ってまとめて追加する</p>
 				</section>
 
 				<section>
