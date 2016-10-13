@@ -6,7 +6,7 @@ Slides
 2013
 ------------
 
-- 08/24: [TypeScriptを使う場面、使わない場面](http://kubosho.github.io/slides/tsbeginner/index.html)
+- 08/24: [TypeScriptを使う場面、使わない場面](http://kubosho.github.io/s/tsbeginner/index.html)
   - at TypeScript初心者向け勉強会 (主催者)
 
 2014
@@ -14,9 +14,9 @@ Slides
 
 - 04/19: [Web Audio APIの初歩](http://www.slideshare.net/kubosho/web-audio-api-33705589)
   - at 帰ってきたYokohama.js (#yjs20140419)
-- 05/08: [Web Audio APIを使って可聴域を調べるアプリをつくってみた](http://www.slideshare.net/kubosho/web-audio-api-34440311)
+- 05/08: [Web Audio APIを使って可聴域を調べるアプリをつくってみた](http://www.slideshare.net/kubosho/web-audio-api-34440311)
   - at CodeGrid二周年記念パーティー
-- 05/29: [Web Audio APIとGitHubのContributionsをマッシュアップしてみた](http://www.slideshare.net/kubosho/web-audio-apigithubcontributions)
+- 05/29: [Web Audio APIとGitHubのContributionsをマッシュアップしてみた](http://www.slideshare.net/kubosho/web-audio-apigithubcontributions)
   - at JSオジサン 「俺の話を聞け、5分だけでもいい」 #2
 - 08/03: [Steins;Gitについて](http://www.slideshare.net/kubosho/steinsgit)
   - at #HTML5飯 2回目
@@ -32,7 +32,7 @@ Slides
   - at 同人誌の勉強会
 - 08/30: [background-(image|size) の深みへようこそ](http://www.slideshare.net/kubosho/backgroundimagesize)
   - at CSSイベント「Back to Basics」
-- 10/31: [CSS の自動整形・解析をするツールの紹介](https://kubosho.github.io/slides/2015/1031-happyhalloween-js/#/)
+- 10/31: [CSS の自動整形・解析をするツールの紹介](https://kubosho.github.io/s/2015/1031-happyhalloween-js/#/)
   - at 「ECMAScript6勉強会」HappyHalloween JS 祭
-- 11/05: [パフォーマンスという概念が存在しない初心者の世界](https://kubosho.github.io/slides/2015/1105-html5beginners/#/)
+- 11/05: [パフォーマンスという概念が存在しない初心者の世界](https://kubosho.github.io/s/2015/1105-html5beginners/#/)
   - at 第13回HTML5ビギナーズ×JSオジサン JSオジサンに怒られない脱初心者JavaScript
