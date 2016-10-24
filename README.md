@@ -26,8 +26,6 @@ Slides
 
 - 05/08: [ブラウザ上で弾ける「あの楽器」を作ってみた](https://speakerdeck.com/kubosho/burauzashang-dedan-keru-afalsele-qi-wozuo-tutemita)
   - at CodeGrid三周年記念パーティー
-- 06/25: [高品質な CSS を書きたい](https://speakerdeck.com/kubosho/gao-pin-zhi-na-css-woshu-kitai)
-  - at JSオジサン「俺の話を聞け、5分だけでもいい」 #5
 - 06/28: [技術系同人誌を作ってコミケで頒布しよう ―― Steins;Git の実例](http://www.slideshare.net/kubosho/06-28howtomakethetechdoujinshi)
   - at 同人誌の勉強会
 - 08/30: [background-(image|size) の深みへようこそ](http://www.slideshare.net/kubosho/backgroundimagesize)
