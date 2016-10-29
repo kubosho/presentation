@@ -34,3 +34,10 @@ Slides
   - at 「ECMAScript6勉強会」HappyHalloween JS 祭
 - 11/05: [パフォーマンスという概念が存在しない初心者の世界](https://kubosho.github.io/s/2015/1105-html5beginners/#/)
   - at 第13回HTML5ビギナーズ×JSオジサン JSオジサンに怒られない脱初心者JavaScript
+  
+2016
+------------
+
+- 10/24: [Prottフロントエンドの今とこれから](https://speakerdeck.com/kubosho/protthurontoendofalseimatokorekara)
+  - at SPAサービスサミット #1
+
