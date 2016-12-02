@@ -1,0 +1,18 @@
+{
+  "name": "2016-slide",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "http-server",
+    "watch": "./bin/watch",
+    "build": "talkie 1203-builderscon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "kubosho",
+  "private": true,
+  "dependencies": {
+    "chokidar": "^1.6.1",
+    "http-server": "^0.9.0"
+  }
+}

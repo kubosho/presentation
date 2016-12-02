@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+const chokidar = require('chokidar')
+const process = require('child_process')
+
+const targetDir = '1203-builderscon'
+
+const watcher = chokidar.watch(`${targetDir}/index.md`, {
+  ignored: /[\/\\]\./,
+  persistent: true
+})
+
+watcher.on('ready', () => {
+  console.log('ready watching...')
+
+  watcher.on('add', (path) => {
+    console.log(`${path} added.`)
+  })
+
+  watcher.on('change',(path) => {
+    console.log(`${path} changed.`)
+
+    process.exec('npm run build', (err, stdout, stderr) => {
+      if (err || stderr) {
+        console.error(err ? err : stderr)
+      }
+
+      if (stdout) {
+        console.log(stdout)
+      }
+    })
+  })
+})
+
