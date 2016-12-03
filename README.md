@@ -30,14 +30,13 @@ Slides
   - at 同人誌の勉強会
 - 08/30: [background-(image|size) の深みへようこそ](http://www.slideshare.net/kubosho/backgroundimagesize)
   - at CSSイベント「Back to Basics」
-- 10/31: [CSS の自動整形・解析をするツールの紹介](https://kubosho.github.io/s/2015/1031-happyhalloween-js/#/)
+- 10/31: [CSS の自動整形・解析をするツールの紹介](https://kubosho.github.io/s/20151031-happyhalloween-js/#/)
   - at 「ECMAScript6勉強会」HappyHalloween JS 祭
-- 11/05: [パフォーマンスという概念が存在しない初心者の世界](https://kubosho.github.io/s/2015/1105-html5beginners/#/)
+- 11/05: [パフォーマンスという概念が存在しない初心者の世界](https://kubosho.github.io/s/20151105-html5beginners/#/)
   - at 第13回HTML5ビギナーズ×JSオジサン JSオジサンに怒られない脱初心者JavaScript
-  
+
 2016
 ------------
 
 - 10/24: [Prottフロントエンドの今とこれから](https://speakerdeck.com/kubosho/protthurontoendofalseimatokorekara)
   - at SPAサービスサミット #1
-
