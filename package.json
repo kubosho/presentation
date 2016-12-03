@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "./bin/watch",
-    "build": "talkie 1203-builderscon",
+    "build": "talkie docs/20161203-builderscon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
