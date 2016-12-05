@@ -40,3 +40,5 @@ Slides
 
 - 10/24: [Prottフロントエンドの今とこれから](https://speakerdeck.com/kubosho/protthurontoendofalseimatokorekara)
   - at SPAサービスサミット #1
+- 12/03: [CSS設計を破綻させない](https://speakerdeck.com/kubosho/cssshe-ji-wopo-zhan-sasenai)
+  - at builderscon tokyo 2016
