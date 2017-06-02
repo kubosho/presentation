@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../lib/talkie.min.css">
+  <link rel="stylesheet" href="../lib/talkie-default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/monokai_sublime.min.css">
+</head>
+<body>
+
+
+<template type="text/x-markdown"
+  layout="title"
+  invert
+  backface="./img/bg.png"
+  backface-filter="blur(2px) brightness(1.5)">
+# 5分で分かるVS Code拡張開発
+
+---
+
+タイトルページのノート
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 今作っている拡張機能のデモ
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## Whimsy
+
+- https://github.com/kubosho/whimsy
+- [vimのcolorschemeで勝手にドキドキするvimrc \- DRYな備忘録](http://otiai10.hatenablog.com/entry/2017/05/11/134057)
+- 面白そうだし、ポモドーロっぽくなりそうなのでVS Codeで実現したかった
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 作るのに必要なもの
+
+- `npm i -g yo generator-code`
+- VS Code
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 注意点
+
+- `registerCommand()` の第一引数に書いた文字列をpackage.jsonにも書く
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="code">
+```javascript
+export function activate(context: ExtensionContext) {
+  const activate = commands.registerCommand('extension.activate', () => {
+    console.log('hello, world');
+  });
+}
+```
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="code">
+```json
+"contributes": {
+    "commands": [
+        {
+            "command": "extension.activate",
+            "title": "Hello world: activate"
+        }
+    ]
+}
+```
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 注意点
+
+- extension.ts内では `activate()` を必ずexportしないといけない
+- `deactivate()` もなるべくexportしておいたほうがいい
+  - 非同期でクリーンアップを実行する場合はPromiseを返す
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 感想
+
+- 検索が面倒
+  - ドキュメントだけを見た場合は目的のページにたどり着きづらい
+  - ドキュメント自体にページ内検索がない
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 感想
+
+- site:https://code.visualstudio.com/docs/extensionAPI/ <検索語>
+- 検索結果からドキュメントへ遷移してページ内検索
+- 実現したい機能を実装している拡張機能のコードを読んだほうが早い気がする
+
+
+</template>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script src="../lib/talkie.min.js"></script>
+<script>
+  var talkie = Talkie({
+    wide: false
+  })
+  talkie.key('space').subscribe(talkie.next$)
+  talkie.key('s').subscribe(talkie.next$)
+  talkie.key('n').subscribe(talkie.next$)
+  talkie.key('a').subscribe(talkie.prev$)
+  talkie.key('p').subscribe(talkie.prev$)
+
+  document.addEventListener('DOMContentLoaded', function() {
+    talkie.changed.subscribe(function(current) {
+      console.info(talkie.notes[current.getAttribute('data-page')])
+    })
+  })
+</script>
+</body>
+</html>
