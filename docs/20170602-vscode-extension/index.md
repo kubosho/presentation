@@ -7,7 +7,7 @@
 -----
 ## Whimsy
 
-- https://github.com/kubosho/whimsy
+- [https://github.com/kubosho/whimsy](https://github.com/kubosho/whimsy)
 - [vimのcolorschemeで勝手にドキドキするvimrc \- DRYな備忘録](http://otiai10.hatenablog.com/entry/2017/05/11/134057)
 - 面白そうだし、ポモドーロっぽくなりそうなのでVS Codeで実現したかった
 
@@ -58,10 +58,11 @@ export function activate(context: ExtensionContext) {
 - 検索が面倒
   - ドキュメントだけを見た場合は目的のページにたどり着きづらい
   - ドキュメント自体にページ内検索がない
+  - site:https://code.visualstudio.com/docs/extensionAPI/ <検索語>
+  - 実現したい機能を実装している拡張機能のコードを読んだほうが早い気がする
 
 -----
-## 感想
+## でも楽しいならOKです
 
-- site:https://code.visualstudio.com/docs/extensionAPI/ <検索語>
-- 検索結果からドキュメントへ遷移してページ内検索
-- 実現したい機能を実装している拡張機能のコードを読んだほうが早い気がする
+- [元ネタ](http://dic.nicovideo.jp/a/%E3%81%A7%E3%82%82%E5%B9%B8%E3%81%9B%E3%81%AA%E3%82%89ok%E3%81%A7%E3%81%99)
+
