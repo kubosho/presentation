@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../lib/talkie.min.css">
+  <link rel="stylesheet" href="../lib/talkie-default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/monokai_sublime.min.css">
+</head>
+<body>
+
+
+<template type="text/x-markdown"
+  layout="title"
+  invert
+  backface="./img/bg.png"
+  backface-filter="blur(2px) brightness(1.5)">
+# HoudiniとTyped OMについて
+
+---
+
+タイトルページのノート
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## The Web Explorer 3は読みましたか？
+
+![表紙](img/web-explorer.jpg)
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## Houdini今北産業
+
+- 「Webプラットフォームのスタイリングとレイアウトの"魔法"を説明する機能を開発する」
+- Polyfillが作りやすくする…かも？
+- ブラウザの対応状況は良くない
+  - [https://ishoudinireadyyet.com/](https://ishoudinireadyyet.com/)
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## Houdiniのリポジトリ
+
+- [https://github.com/w3c/css-houdini-drafts/](https://github.com/w3c/css-houdini-drafts/)
+- [https://github.com/WICG/CSS-Parser-API](https://github.com/WICG/CSS-Parser-API)
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="title">
+## Houdiniで熱い仕様
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## Typed OM
+
+[https://github.com/w3c/css-houdini-drafts/commits/master/css-typed-om](https://github.com/w3c/css-houdini-drafts/commits/master/css-typed-om)
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## そもそもCSSOMとは
+
+[https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model?hl=ja](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model?hl=ja)
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## Typed OMとは
+
+- CSSOMは文字列を元にしたAPIだった
+- JavaScriptのオブジェクトを使ってCSSの値に型を付けられる
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## デモ
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## まとめ
+
+- calc()の計算が正しいかどうか検証するツールとか作れそう
+- 他にも使い道はあるはず
+
+
+</template>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script src="../lib/talkie.min.js"></script>
+<script>
+  var talkie = Talkie({
+    wide: false
+  })
+  talkie.key('space').subscribe(talkie.next$)
+  talkie.key('s').subscribe(talkie.next$)
+  talkie.key('n').subscribe(talkie.next$)
+  talkie.key('a').subscribe(talkie.prev$)
+  talkie.key('p').subscribe(talkie.prev$)
+
+  document.addEventListener('DOMContentLoaded', function() {
+    talkie.changed.subscribe(function(current) {
+      console.info(talkie.notes[current.getAttribute('data-page')])
+    })
+  })
+</script>
+</body>
+</html>
