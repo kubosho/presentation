@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>同人イベントで必須・あったら便利なもの</title>
+  <link rel="stylesheet" href="../lib/talkie.min.css">
+  <link rel="stylesheet" href="../lib/talkie-default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/monokai_sublime.min.css">
+</head>
+<body>
+
+
+<template type="text/x-markdown"
+  layout="title"
+  invert
+  backface
+  backface-filter="blur(2px) brightness(1.5)">
+# 同人イベントで必須・あったら便利なもの
+
+---
+
+タイトルページのノート
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 執筆のあとは頒布
+
+- コミケ
+- 技術書典
+- and more...
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 頒布するときイベント会場に何を持ち込んだらいいか分からない
+
+- 何が必要なのか
+- 準備しすぎても大変だししなくても大変
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 必須なもの
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## お釣り
+
+- 言わずもがな
+- 500円にした場合は500円玉の棒金1つ
+- 600〜900円の場合は100円玉の棒金3つ
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 金庫
+
+- お金を管理するために必須
+- 東急ハンズで売っている小さい金庫で良い
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## ボールペーン
+
+- 見本誌票や在庫の本を家に送るときなど何かと使う
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## ゴミ袋
+
+- イベントによってはゴミは持ち帰りの場合がある
+- チラシやその他ゴミを入れるのに便利
+- キャリーカートで搬出入する場合は雨が降っているときにダンボールを包める
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 飲食物
+
+- 特に飲み物は必須
+- どの季節でも1リットルの飲み物があると良い
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## あってよかったもの
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## A3サイズの厚紙
+
+- 何かと便利
+- 頒布に関する情報を書ける（完売とか）
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## カッターナイフ
+
+- 印刷所から納品されたダンボール箱を開けるときに便利
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## マスキングテープ
+
+- いろいろなものを貼るときに便利
+- 粘着力も高くないのではがしやすくて良い
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## テーブルクロス
+
+- 本の見栄えがよくなる
+- 本が傷つきにくくなる
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## ダンダン段ボール
+
+- [http://www.shimaya.net/dandan/](http://www.shimaya.net/dandan/)
+- 同人誌の展示に使える
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## レジプラ
+
+- [http://regipla.com/](http://regipla.com/)
+- 正の字カウントから解放されるのが本当に良い
+- 自分としては必須レベル
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## おまけ
+
+- 同人誌はどれだけの部数を印刷するといいか
+- コミケなら50部
+- 技術書典なら75〜100部
+
+
+</template>
+
+<template type="text/x-markdown"
+  layout="bullets">
+## 自己紹介
+
+- kubosho_
+- [O2 Project](https://o2p.booth.pm/)代表
+- 今まで4冊同人誌を出してきました
+
+
+</template>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script src="../lib/talkie.min.js"></script>
+<script>
+  var talkie = Talkie({
+    wide: false
+  })
+  talkie.key('space').subscribe(talkie.next$)
+  talkie.key('s').subscribe(talkie.next$)
+  talkie.key('n').subscribe(talkie.next$)
+  talkie.key('a').subscribe(talkie.prev$)
+  talkie.key('p').subscribe(talkie.prev$)
+
+  document.addEventListener('DOMContentLoaded', function() {
+    talkie.changed.subscribe(function(current) {
+      console.info(talkie.notes[current.getAttribute('data-page')])
+    })
+  })
+</script>
+</body>
+</html>
