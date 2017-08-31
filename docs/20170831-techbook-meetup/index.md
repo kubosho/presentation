@@ -99,4 +99,17 @@
 
 - kubosho_
 - [O2 Project](https://o2p.booth.pm/)代表
+- 技術書典ではスタッフとサークル出展を経験済み
 - 今まで4冊同人誌を出してきました
+
+-----
+## こんな感じ
+
+![O2 Project Booth](img/booth.png)<br>
+[https://o2p.booth.pm/](https://o2p.booth.pm/)
+
+-----
+## 【PR】
+
+![技術書典3](img/techbookfest.png)<br>
+技術書典3来てね！
